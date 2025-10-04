@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yuqing Wang — iOS Developer & Artist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      color: #222;
+      background-color: #fdfdfb;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.2rem;
+      margin-top: 2rem;
+    }
+    p {
+      max-width: 600px;
+      margin: 0.5rem auto;
+    }
+    .container {
+      width: 90%;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    img.avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+      filter: grayscale(20%);
+    }
+    section {
+      margin-top: 2rem;
+    }
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .app {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .app img {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .app h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      margin: 0.3rem 0;
+    }
+    .app p {
+      font-size: 0.85rem;
+      color: #555;
+      margin: 0;
+    }
+    .timeline {
+      border-left: 1px solid #ccc;
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+    }
+    .t-item {
+      margin-bottom: 0.8rem;
+    }
+    .t-item h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      margin: 0;
+      font-size: 1rem;
+    }
+    .t-item small {
+      color: #777;
+      font-size: 0.85rem;
+    }
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 2rem 1rem;
+      font-size: 0.8rem;
+    }
+    a { color: #444; text-decoration: underline; }
+    a:hover { color: #000; }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="avatar" src="pics/avatar.jpg" alt="Portrait" />
+    <h1>Yuqing Wang</h1>
+    <p>iOS Developer · Designer · Minimalist</p>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <p>I create calm, human-centered iOS experiences that blend technical precision and artistic sensitivity. My work values subtle animation, gentle contrast, and tactile feedback — digital craftsmanship that feels personal.</p>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="apps">
+        <div class="app">
+          <img src="pics/mirroracle.jpg" alt="Mirroracle icon">
+          <h3>Mirroracle</h3>
+          <p>Published — a simple time manager to capture your days and reflect with clear daily, weekly, monthly, and yearly reviews. <a href="https://apps.apple.com/us/app/mirroracle/id6450036679">App Store</a></p>
+        </div>
+        <div class="app">
+          <img src="" alt="FocusFlow icon">
+          <h3>FocusFlow</h3>
+          <p>Upcoming — a minimalist timer and habit tracker built with SwiftUI.</p>
+        </div>
+        <div class="app">
+          <img src="" alt="PocketBudget icon">
+          <h3>PocketBudget</h3>
+          <p>Upcoming — a simple finance app for mindful spending and balance.</p>
+        </div>
+        <div class="app">
+          <img src="" alt="SketchCalm icon">
+          <h3>SketchCalm</h3>
+          <p>Upcoming — a drawing and journaling tool for creative reflection.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="employment">
+      <h2>Employment</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <h4>Software Engineer — TikTok</h4>
+          <small>2021 – 2023 · Shanghai, China</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <h4>M.S. Computer Science — Tufts University</h4>
+          <small>2024 — 2025</small>
+        </div>
+        <div class="t-item">
+          <h4>M.S. Information Systems — Northeastern University</h4>
+          <small>2018 — 2019</small>
+        </div>
+        <div class="t-item">
+          <h4>B.E. Electronic Science and Technology — Dalian University of Technology</h4>
+          <small>2014 — 2018</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Yuqing Wang · Built with clarity and calm.
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
