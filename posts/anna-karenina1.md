@@ -1,0 +1,38 @@
+---
+title: After Everything Begins and Ends
+category: Reading
+date: October 2025
+summary: A reflection on love, loss, and the inevitable tragedy within Tolstoy’s *Anna Karenina*.
+---
+
+“From then on, the prince and the princess lived happily ever after.”
+This is the common ending shared by all fairy tales.
+
+When the warmth of a “happy ending” is peeled away, what lies underneath is often the quiet cruelty of reality. In Anna Karenina, the first volume ends when Karenin finally lets go, and Anna and Vronsky are united. But the equally thick second volume tells us unmistakably: the story is far from over.
+
+Anna, born a noblewoman of the highest order, severs herself from her entire social ecosystem in pursuit of love — a love of the Werther kind.
+Their union is a process of abandonment: Anna gives up her family, reputation, social status, and even her beloved son, Seryozha. Vronsky gives up his career prospects and future honors. Yet what they lose is not equal. Anna gives up what cannot be replaced—her very way of existing; Vronsky gives up things that are optional, transient, and can always be regained.
+
+So when they finally come together, what remains of Anna? What remains of Vronsky?
+Anna’s death becomes an inevitable outcome—a validation of the price demanded by a repressive society when one dares to rebel. It’s not that Vronsky gave nothing, but society made sure that the woman, as the rebel, paid far more—even for sins not her own.
+
+That unfairness locked Anna inside a dark chamber built by herself, Vronsky, and public opinion — a room without sunlight or mercy.
+
+Junichi Watanabe once said: “I do not believe in eternal love.” Love, once reaching its peak, slowly fades and becomes life itself.
+In *A Lost Paradise*, the male protagonist strangles his lover to keep love forever at its highest point—turning the instant into eternity.
+
+Anna never understood this.
+She anxiously measured how much love was left between them, and the more she measured, the more it diminished. Love became both her comfort and her torment.
+
+It wasn’t just Vronsky’s pride or lack of sympathy that destroyed them — it was also his inability to match the intensity of her soul.
+
+Anna’s desire for love and for life was like a dormant volcano — once awakened, it demanded a partner willing to burn with her.
+But Vronsky, a charming yet shallow aristocrat, could never bear that heat.
+He still had friends, family, worldly ambitions — an entire social life Anna could no longer enter.
+
+It wasn’t his fault that his heart was divided; his fault was that he awakened in Anna a fire he could neither sustain nor extinguish.
+A soul crying out “I want love, I want life” was something the decaying Russian society could not tolerate nor comprehend.
+And so, Anna hesitated, went mad, and died.
+Vronsky wavered, grew restless, and despaired.
+
+That, in Tolstoy’s eyes, is the true final ending of a fairy tale.

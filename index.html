@@ -9,6 +9,38 @@
   <title>Yuqing Wang</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
   <style>
+    nav {
+      background-color: #fdfdfb;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1.2rem;
+    }
+    .nav-container .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-decoration: none;
+      color: #111;
+    }
+    .nav-links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover {
+      color: #000;
+    }
+
     body {
       margin: 0;
       font-family: 'IBM Plex Sans', sans-serif;
@@ -114,6 +146,15 @@
   </style>
 </head>
 <body>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">YW</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+      </div>
+    </div>
+  </nav>
   <header>
     <img class="avatar" src="pics/avatar.jpg" alt="Portrait" />
     <h1>Yuqing Wang</h1>
