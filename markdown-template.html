@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Article — Yuqing Wang</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     body {
       font-family: 'IBM Plex Sans', sans-serif;
@@ -23,10 +22,9 @@
       font-size: 2rem;
       margin-bottom: 0.5rem;
     }
-    .meta {
-      color: #777;
+    em {
+      color: #666;
       font-size: 0.9rem;
-      margin-bottom: 2rem;
     }
     hr {
       border: none;
@@ -43,9 +41,9 @@
 </head>
 <body>
   <a href="articles.html">← Back to Articles</a>
-  <header id="header"></header>
-  <article id="content"></article>
+  <div id="content"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
     const file = params.get("post");
@@ -54,28 +52,18 @@
       fetch("posts/" + file)
         .then(res => res.text())
         .then(md => {
-          const fmMatch = md.match(/^([\s\S]*?)(?:\n{2,}|$)/);
-          const frontMatter = {};
-          const fmBlock = fmMatch ? fmMatch[1] : "";
+          document.getElementById("content").innerHTML = marked.parse(md);
 
-          fmBlock.split("\n").forEach(line => {
-            const [key, ...rest] = line.split(":");
-            if (key && rest.length) {
-              frontMatter[key.trim()] = rest.join(":").trim();
-            }
-          });
-
-          const content = md.replace(fmBlock, "").trim();
-          const header = document.getElementById("header");
-          header.innerHTML = `
-            <h1>${frontMatter.title || "Untitled"}</h1>
-            <div class="meta">
-              ${frontMatter.date || ""} ${frontMatter.category ? " · " + frontMatter.category : ""}
-            </div>
-            <hr>
-          `;
-          document.title = (frontMatter.title || "Article") + " — Yuqing Wang";
-          document.getElementById("content").innerHTML = marked.parse(content);
+          // 自动识别 markdown 第一行的 # 作为标题
+          const h1Match = md.match(/^#\s+(.+)/m);
+          if (h1Match) {
+            document.title = h1Match[1] + " — Yuqing Wang";
+          } else {
+            document.title = "Article — Yuqing Wang";
+          }
+        })
+        .catch(err => {
+          document.getElementById("content").innerHTML = `<p>⚠️ ${err.message}</p>`;
         });
     } else {
       document.getElementById("content").innerHTML = "<p>No post selected.</p>";
