@@ -1,9 +1,6 @@
----
-title: After Everything Begins and Ends
-category: Reading
-date: October 2025
-summary: A reflection on love, loss, and the inevitable tragedy within Tolstoy’s *Anna Karenina*.
----
+# After Everything Begins and Ends
+## category: Reading
+## date: October 2025
 
 “From then on, the prince and the princess lived happily ever after.”
 This is the common ending shared by all fairy tales.
