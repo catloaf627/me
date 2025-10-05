@@ -115,7 +115,6 @@
   <header>
     <h1>A Garden of One's Own</h1>
     <div class="bubbles">
-      <div class="bubble" data-category="All">All</div>
       <div class="bubble" data-category="CS Basics">CS Basics</div>
       <div class="bubble" data-category="iOS">iOS</div>
       <div class="bubble" data-category="Design">Design</div>
@@ -138,13 +137,20 @@
 
     const container = document.getElementById('article-list');
     const bubbles = document.querySelectorAll('.bubble');
+    let activeCategories = new Set(); // store selected categories
 
-    // 渲染文章
-    function renderArticles(filter = 'All') {
+    function renderArticles() {
       container.innerHTML = '';
-      const filtered = filter === 'All'
-        ? articles
-        : articles.filter(a => a.category === filter);
+      let filtered;
+
+      // If nothing is selected, show all
+      if (activeCategories.size === 0) {
+        filtered = articles;
+      } else {
+        filtered = articles.filter(a => activeCategories.has(a.category));
+      }
+
+      // Render articles
       filtered.forEach(a => {
         const div = document.createElement('div');
         div.className = 'article';
@@ -157,17 +163,31 @@
       });
     }
 
-    // 初始化
     renderArticles();
 
-    // 点击分类筛选
     bubbles.forEach(b => {
       b.addEventListener('click', () => {
-        bubbles.forEach(bb => bb.classList.remove('active'));
-        b.classList.add('active');
-        renderArticles(b.dataset.category);
+        const category = b.dataset.category;
+
+        // Toggle selection
+        if (activeCategories.has(category)) {
+          activeCategories.delete(category);
+        } else {
+          activeCategories.add(category);
+        }
+
+        // Update bubble styles
+        bubbles.forEach(bb => {
+          const c = bb.dataset.category;
+          if (activeCategories.has(c)) bb.classList.add('active');
+          else bb.classList.remove('active');
+        });
+
+        renderArticles();
       });
     });
   </script>
+
+
 </body>
 </html>
