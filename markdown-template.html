@@ -66,7 +66,6 @@
         .then(md => {
           document.getElementById("content").innerHTML = marked.parse(md);
 
-          // 自动识别 markdown 第一行的 # 作为标题
           const h1Match = md.match(/^#\s+(.+)/m);
           if (h1Match) {
             document.title = h1Match[1] + " — Yuqing Wang";
