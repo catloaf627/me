@@ -49,42 +49,61 @@
       line-height: 1.7;
       font-size: 15px;
     }
+
+    /* ✅ 修正头像与名字居中对齐 */
     header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       padding: 2rem 1rem 1rem;
     }
-    .pronounce-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      margin-left: 0; /* remove gap */
-      padding: 0;     /* remove extra space */
-      display: inline-flex;
-      align-items: center;
-      vertical-align: middle;
-      transform: translateY(2px); /* tiny adjustment to align baseline */
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-    .pronounce-btn img {
-      width: 26px;
-      height: 26px;
-      opacity: 0.8;
+
+    img.avatar {
+      width: 135px;
+      height: 135px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
       filter: grayscale(20%);
-    }
-    .pronounce-btn:hover {
-      transform: scale(1.1) translateY(2px);
-    }
-    .pronounce-btn:hover img {
-      opacity: 1;
-      filter: none;
+      display: block; /* 去掉默认下方间隙 */
     }
 
     h1 {
+      position: relative;
+      display: inline-block;
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
       font-size: 2rem;
       margin-bottom: 0.3rem;
     }
+
+    /* ✅ icon 紧贴名字、不会影响居中 */
+    .pronounce-btn {
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translate(6px, -50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .pronounce-btn img {
+      width: 26px;
+      height: 26px;
+      opacity: 0.2;
+      filter: grayscale(20%);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .pronounce-btn:hover img {
+      transform: scale(1.1);
+      opacity: 1;
+      filter: none;
+    }
+
     h2 {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
@@ -101,14 +120,6 @@
       width: 90%;
       max-width: 650px;
       margin: 0 auto;
-    }
-    img.avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 0.5rem;
-      filter: grayscale(20%);
     }
     section {
       margin-top: 2rem;
@@ -174,13 +185,16 @@
 <body>
   <nav>
     <div class="nav-container">
-    <a href="index.html" class="logo"> <img src="pics/yuqing.png" alt="Yuqing Wang logo" style="height: 36px; vertical-align: middle;"> </a>
+      <a href="index.html" class="logo">
+        <img src="pics/yuqing.png" alt="Yuqing Wang logo" style="height: 36px; vertical-align: middle;">
+      </a>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="garden.html">Garden</a>
       </div>
     </div>
   </nav>
+
   <header>
     <img class="avatar" src="pics/avatar.jpg" alt="Portrait" />
     <h1>
