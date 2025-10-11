@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="How to pronounce Yuqing Wang" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="pics/favicon.png">
+  <title>How to pronounce my name — Yuqing Wang</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      background-color: #fdfdfb;
+      color: #222;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    nav {
+      background-color: #fdfdfb;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1.2rem;
+    }
+    .nav-container .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-decoration: none;
+      color: #111;
+    }
+    .nav-links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover { color: #000; }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    .container {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .voice-list {
+      margin-top: 2rem;
+    }
+.voice-item {
+  border-left: none;        /* 去掉左边竖线（更居中风格） */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+    .voice-item h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+audio {
+  display: block;
+  margin: 0.6rem auto 0;  /* 自动水平居中 */
+  width: 300px;           /* 播放条宽度，可根据喜好调整 */
+  max-width: 90%;
+}
+
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 2rem 1rem;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">YW</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="garden.html">Garden</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>How to pronounce my name (Yuqing)</h1>
+  </header>
+
+  <main class="container voice-list">
+    <div class="voice-item">
+      <h3>AI Voice</h3>
+      <audio controls>
+        <source src="audio/ai.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="voice-item">
+      <h3>Myself</h3>
+      <audio controls>
+        <source src="audio/myself.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Yuqing Wang · Weigh like a bird.
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -53,6 +53,32 @@
       text-align: center;
       padding: 2rem 1rem 1rem;
     }
+    .pronounce-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 0; /* remove gap */
+      padding: 0;     /* remove extra space */
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+      transform: translateY(2px); /* tiny adjustment to align baseline */
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .pronounce-btn img {
+      width: 26px;
+      height: 26px;
+      opacity: 0.8;
+      filter: grayscale(20%);
+    }
+    .pronounce-btn:hover {
+      transform: scale(1.1) translateY(2px);
+    }
+    .pronounce-btn:hover img {
+      opacity: 1;
+      filter: none;
+    }
+
     h1 {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
@@ -157,7 +183,12 @@
   </nav>
   <header>
     <img class="avatar" src="pics/avatar.jpg" alt="Portrait" />
-    <h1>Yuqing Wang</h1>
+    <h1>
+      Yuqing Wang
+      <button class="pronounce-btn" onclick="window.location.href='pronounce.html'">
+        <img src="pics/horn_icon.png" alt="Hear my name" />
+      </button>
+    </h1>
     <p>Programmer · Designer · Minimalist</p>
   </header>
 
